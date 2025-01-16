@@ -71,7 +71,7 @@ jobs:
         run: echo "PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig" >> $GITHUB_ENV
       - name: Run clippy
         run: |
-          cargo clippy --all-targets --features \
+          cargo clippy --all-targets --timings --features \
             "jemalloc \
             io-uring \
             valgrind \
